@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta charset="UTF-8">
+<title>Fall Play 2023</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cookie&family=Great+Vibes&family=Lato&display=swap" rel="stylesheet"></head>
+  
+<body>
+	<h1>Countdown to Fall Play:</h1>
+ <div id="countdown"> 
+    <div>Days: <span id="days"></span></div>
+    <div>Hours: <span id="hours"></span></div>
+    <div>Minutes: <span id="minutes"></span></div>
+    <div>Seconds: <span id="seconds"></span></div>
+  </div>
+
+  <div id="headline"></div>
+  <div id="content"></div>
+
+  <script>
+    (function() {
+      const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+      const birthday = new Date("12/07/2023").getTime();  // Replace YYYY with the birth year
+
+      const countdown = setInterval(function() {
+        const now = new Date().getTime(),
+              distance = birthday - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / day);
+        document.getElementById("hours").innerText = Math.floor((distance % day) / hour);
+        document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute);
+        document.getElementById("seconds").innerText = Math.floor((distance % minute) / second);
+
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "The Fall Play is Today!";
+          document.getElementById("countdown").style.display = "none";
+          clearInterval(countdown);
+        }
+      }, 0);
+    })();
+  </script>
+  <div class="content"> 
+	<div class="navbar" id="top">
+    <nav>
+        <ul>
+            <li> <a href="/"> Home </a> </li>
+            <li> <a href="/tickets.html"> Tickets </a> </li>
+            <li> <a href="/about_us"> About Us</a> </li>
+        </ul>
+    </nav>
+    </div>
+        	<h2 id="tit" class="book-title">Bowditch Drama presents...</h2>
+          <h1 id="tit">Deleted Scenes From The Fairytales!</h1>
+
+					<a href="/tickets.html" class="button">Buy Tickets</a>
+
+
+					<div class="cover">
+						<a> <img src="FP_Poster.png" width="500" height="755" class="book-cover"> </a>
+					</div> 
+          </div>
+
+<hr>
+<hr>
+<h1 class="n1"> Read About Bowditch Drama! </h1>
+<p> (Put text here.) </p>
+<div class="videofooter" id="videofooter">
+  <div class="parent">
+    <div class="child2">
+      <img src="uznaulo8fvemweaqbhfe.webp"> 
+    </div>
+  </div>
+<br><br><br><br>
+	<footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+<li class="social-icon__item"><a class="social-icon__link" href="">
+	<ion-icon name="globe-outline"></ion-icon>
+        </a></li>
+
+	    
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="/">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="/tickets.html">Tickets</a></li>
+      <li class="menu__item"><a class="menu__link" href="/about_us.html">About Us</a></li>
+
+    </ul>
+    <p id="footerp">© 2023 BOWDITCH DRAMA. ALL RIGHTS RESERVED. </p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+    
+</body>
+
+	</html>
